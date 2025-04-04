@@ -27,7 +27,6 @@ npm create lvyjs@latest -y --registry=https://registry.npmmirror.com
 ```bash title="选择模版"
 ? Which template do you want to use? ...
 > alemonjs
-  yunzaijs
   jsxp
   pure
 ```
@@ -65,7 +64,7 @@ yarn install
 
 - [lvyjs 文档](./tools/lvyjs)
 - [JSXP 文档](./tools/jsxp)
-- [Alemonjs 开发文档](https://alemonjs.com/)
+- [alemonjs 文档](https://alemonjs.com/)
 
 ## 模板源码
 
