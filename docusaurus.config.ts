@@ -59,7 +59,7 @@ const config: Config = {
         },
         { to: 'blog', label: '动态', position: 'left' }, // or position: 'right'
         {
-          position: 'left',
+          position: 'right',
           label: '编辑',
           href: 'https://github.com/lemonade-lab/lvyjs-docs/blob/main/docs/1-intro.md'
         },

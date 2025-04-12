@@ -31,16 +31,7 @@ npm create lvyjs@latest -y --registry=https://registry.npmmirror.com
   pure
 ```
 
-## 进入项目
-
 > 按照提示，进入项目目录
-
-```bash title="进入项目"
-cd alemonb
-cd yunzaib
-cd jsxp
-cd pure
-```
 
 ## 安装依赖
 

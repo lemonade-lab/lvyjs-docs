@@ -19,42 +19,22 @@ import TabItem from '@theme/TabItem';
 git --version
 ```
 
-[Brew 官网](https://brew.sh/)
-
-```bash title="下载Brew"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-```bash title="添加环境变量"
-echo 'export PATH="/opt/homebrew/bin:$PATH"' >> ~/.bash_profile
-```
-
-```bash title="添加环境变量"
-echo 'export PATH="/opt/homebrew/bin:$PATH"' >> ~/.zshrc
-```
-
-```bash title="重载环境变量"
-source ~/.bash_profile && source ~/.zshrc
-```
-
 > 使用[nvm](https://github.com/nvm-sh/nvm)对Node.js进行安装和版本管理，方便切换版本进行开发
 
 ```bash title="安装nvm"
-brew install nvm
+git clone git@github.com:nvm-sh/nvm.git ./.nvm
 ```
 
 ```bash title="为bash添加环境"
 echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.bash_profile
-echo '[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"' >> ~/.bash_profile
-echo '[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"' >> ~/.bash_profile
+echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.bash_profile
+echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.bash_profile
 ```
 
 ```bash title="为zshrc添加环境"
 echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
-# This loads nvm
-echo '[ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"' >> ~/.zshrc
-# This loads nvm bash_completion
-echo '[ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"' >> ~/.zshrc
+echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.zshrc
+echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.zshrc
 ```
 
 ```bash title="刷新环境"
