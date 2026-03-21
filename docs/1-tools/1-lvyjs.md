@@ -43,11 +43,8 @@ npm install lvyjs -D
 import { defineConfig } from 'lvyjs'
 import { fileURLToPath } from 'url'
 import { dirname, join } from 'path'
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = dirname(__filename)
-const server = () => import('./src/index')
+const __dirname = dirname(fileURLToPath(import.meta.url))
 export default defineConfig({
-  plugins: [() => server],
   alias: {
     entries: [{ find: '@src', replacement: join(__dirname, 'src') }]
   },
@@ -60,8 +57,12 @@ export default defineConfig({
 })
 ```
 
+```sh title="src/index.ts"
+console.log("start")
+```
+
 ```sh
-npx lvy dev
+npx lvy src/index.ts
 ```
 
 ```sh title="对 src 目录打包并输出到 lib 目录"
